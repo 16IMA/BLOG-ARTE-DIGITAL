@@ -22,9 +22,9 @@ const ArtPostCard: React.FC<ArtPostProps> = ({ post, onSave }) => {
                 {post.cuerpo}
             </div>
 
-            {onSave && <button onClick={() => onSave(post)}>Pub</button>
+            {onSave && <button onClick={() => onSave(post)}>Publicar</button>}
         </article>
     );
 };
 
-export default ArtistaCard;
+export default ArtPostCard;
