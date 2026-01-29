@@ -1,8 +1,9 @@
-interface ArtPost {
-    título: string;
+import styles from "./ArtPostCard.module.css";
+
+export interface ArtPost {
+    titulo: string;
     subtitulo: string;
-    cuerpo: number;
-    fecha: string;
+    cuerpo: string
 }
 
 interface ArtPostProps {
@@ -14,7 +15,7 @@ const ArtPostCard: React.FC<ArtPostProps> = ({ post, onSave }) => {
     return (
         <article className={styles.article}>
             <header>
-                <h2 className={styles.title}>{post.título}</h2>
+                <h2 className={styles.title}>{post.titulo}</h2>
                 <p className={styles.subtitle}>{post.subtitulo}</p>
             </header>
 
@@ -28,3 +29,4 @@ const ArtPostCard: React.FC<ArtPostProps> = ({ post, onSave }) => {
 };
 
 export default ArtPostCard;
+
