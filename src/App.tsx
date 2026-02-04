@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ArtPostCard, { type ArtPost } from "./components/ArtPostCard";
 import EditorAsistente from "./components/EditorAsistente";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
 
 function App() {
   const [postActual, setPostActual] = useState<ArtPost>({
@@ -9,16 +11,31 @@ function App() {
     cuerpo: "Este es el contenido de mi primera publicación sobre arte digital.",
   });
 
-  const handleCrearPost = (ideaSemilla: string) => {
+  const handleCrearPost = async(ideaSemilla: string) => {
      console.log("Enviada a la IA:", ideaSemilla);
+
+     try{
+        const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
+        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+
+        const prompt = `Eres una experta en arte digital. Escribe una crítica corta y profesional sobre: ${ideaSemilla}. Devuelve el resultado con este formato: Título: [título] Cuerpo: [contenido]`;
+
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const textoIA = response.text();
+     
 
      setPostActual({
         titulo: `Crítica "${ideaSemilla}"`,
         subtitulo: "Análisis generado por la IA",
-        cuerpo: `Has enviado la idea: "${ideaSemilla}" y ha sido generada por la IA.`,
+        cuerpo: textoIA
 
         });
-    };
+
+        } catch (error) {
+            console.error("Error al generar el post:", error);
+    }
+};
 
     return (
 
@@ -37,7 +54,10 @@ function App() {
         {/* FASE 1: La Visualización (Resultado) */}
         <ArtPostCard post={postActual} />
         </div>
-    )
+
+        
+    );
+
 }
 
 
