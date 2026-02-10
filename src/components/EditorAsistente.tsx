@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./EditorAsistente.module.css";
+import styles from "../styles/EditorAsistente.module.css";
 
 interface EditorAsistenteProps {
     onGenerar: (prompt: string) => void;

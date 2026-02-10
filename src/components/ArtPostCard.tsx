@@ -1,4 +1,4 @@
-import styles from "./ArtPostCard.module.css";
+import styles from "../styles/ArtPostCard.module.css";
 
 export interface ArtPost {
     titulo: string;
