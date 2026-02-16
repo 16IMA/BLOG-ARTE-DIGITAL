@@ -1,7 +1,7 @@
- import { useState } from "react";
-  import { GoogleGenerativeAI } from "@google/generative-ai";
-  import EditorAsistente from "./EditorAsistente";
-  import ArtPostCard, { ArtPost } from "./ArtPostCard";
+import { useState } from "react";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import EditorAsistente from "./EditorAsistente";
+import ArtPostCard, { type ArtPost } from "./ArtPostCard";
 
 function BlogPanel() {
  
