@@ -6,7 +6,21 @@ import HomePage from "../components/HomePage";
 import AboutPage from "../components/AboutPage";
 
 function App() {
-  return 
+  
+  //Variables de estado
+
+
+  //Eventos
+
+
+  //Funciones
+
+
+  
+  
+  
+  
+    return 
   (
     <BrowserRouter>
         <div className="app-container">
