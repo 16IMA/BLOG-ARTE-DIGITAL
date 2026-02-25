@@ -1,4 +1,5 @@
 import { FaInstagram, FaTiktok } from "react-icons/fa";
+import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
 

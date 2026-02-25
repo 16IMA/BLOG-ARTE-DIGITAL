@@ -1,0 +1,15 @@
+.headerContainer {
+  display: flex;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.headerLogo {
+
+  height: 14px;
+}
+
+menuIcon {
+  height: 14px;
+  cursor: pointer;
+}

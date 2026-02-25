@@ -1,15 +1,18 @@
+import styles from "../styles/Header.module.css";
 
 const Header = () => {
 
-<header className="header-container">
-    <div className="header-wrapper">
-        <img src="/public/logo-IMA.png" alt="Logo IMA" className="header-logo" />
-    </div>
+    return(
+        <header className={styles.headerContainer}>
+            <div className={styles.headerLogoContainer}>
+                <img src="/logo-IMA.png" alt="Logo IMA" className={styles.headerLogo} />
+            </div>
 
-    <div>
-        <img src="/public/menu-hamburguesa.png" alt="Menú" className="menu-icon" />
-    </div>
-</header>
+            <div className={styles.headerMenuContainer}>
+                <img src="/menu-hamburguesa.png" alt="Menú" className={styles.menuIcon} />
+            </div>
+        </header>
+    );
 };
 
 export default Header;
