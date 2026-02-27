@@ -1,14 +1,14 @@
-/* src/components/ArtPostCard.module.css */
-.contenedor {
+
+contenedor {
     max-width: 750px;
     margin: 50px auto;
     padding: 30px;
     background-color: #fff;
-    border-left: 1px solid #eaeaea; /* Un toque sutil de diseño */
+    border-left: 1px solid #eaeaea; 
 }
 
 .titulo {
-    font-family: 'Playfair Display', serif; /* Si no la tienes, usará una con serifa por defecto */
+    font-family: 'Playfair Display', serif; 
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;

@@ -1,15 +1,18 @@
 .headerContainer {
   display: flex;
+  justify-content: space-between;
+  margin: 5rem;
   padding: 1rem;
   background-color: #ffffff;
 }
 
 .headerLogo {
-
-  height: 14px;
+  display: flex;
+  align-items: start;
+  height: 2rem;
 }
 
-menuIcon {
-  height: 14px;
+.menuIcon {
+  height: 1rem;
   cursor: pointer;
 }
