@@ -1,41 +1,37 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "../components/Header";
-import Footer  from "../components/Footer";
-import BlogPanel from "../components/BlogPanel";
-import HomePage from "../components/HomePage";
-import AboutPage from "../components/AboutPage";
+// src/pages/App.tsx
+import { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import HomePage from '../components/HomePage';
+import ArtPostCard from '../components/ArtPostCard';
+import { POSTS } from '../data/posts'; // Asegúrate de importar tus datos
 
 function App() {
-  
-  //Variables de estado
+  const [currentPostId, setCurrentPostId] = useState<string | null>(null);
 
+  return (
+    <div className="min-h-screen flex flex-col justify-between bg-surface-container-lowest text-on-surface">
+      {/* Header global */}
+      <Header onGoHome={() => setCurrentPostId(null)} />
 
-  //Eventos
+      {/* Contenido dinámico */}
+      <main className="flex-grow">
+        {currentPostId ? (
+          <ArtPostCard 
+            postId={currentPostId} 
+            onBack={() => setCurrentPostId(null)} 
+          />
+        ) : (
+          <HomePage 
+            onSelectPost={(id) => setCurrentPostId(id)} 
+          />
+        )}
+      </main>
 
-
-  //Funciones
-
-
-  
-  
-  
-  
-    return  (
-    <BrowserRouter>
-            <Header />
-            <main className="main-content">
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    {/* Ruta privada */}
-                    <Route path="/admin-panel" element={<BlogPanel />} />
-                </Routes>
-            </main>
-            <Footer/>
-    </BrowserRouter>
+      {/* Footer global */}
+      <Footer />
+    </div>
   );
 }
-
-
 
 export default App;

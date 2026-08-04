@@ -2,6 +2,10 @@ import { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import EditorAsistente from "./EditorAsistente";
 import ArtPostCard, { type ArtPost } from "./ArtPostCard";
+import { useEffect } from "react";
+import { v4 as uuidv4 } from 'uuid';        
+
+
 
 // Componente principal del panel de control del blog, que integra el editor y la visualización del post generado
 
@@ -36,7 +40,7 @@ function BlogPanel() {
     }, [postActual]);
 
 
-
+// Función para manejar la generación del post a partir de la idea semilla, utilizando la API de Google Generative AI
 
     const handleGenerarConIA = async(ideaSemilla: string) => {
 
@@ -81,6 +85,8 @@ function BlogPanel() {
             const result = await model.generateContent(prompt);
             const response = await result.response;
             const textoIA = response.text();
+
+            const datosLimpios = JSON.parse(textoIA.replace(/```json|```/g, ""));
         
 
         setPostActual({
