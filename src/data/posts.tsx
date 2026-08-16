@@ -14,7 +14,7 @@ export const POSTS: Post[] = [
     title: "Rodrigo Nevsky 'Viajes de ensueño'",
     excerpt: "Reseña de la exposición 'Viajes de ensueño' del artista visual Rodrigo Nevsky, explorando la fusión de arte y tecnología.",
     date: "2026-08-01",
-    image: "public/RN51.jpg",
+    image: "/RN51.jpg",
     content: `
       Just stop your crying
 Have the time of your life

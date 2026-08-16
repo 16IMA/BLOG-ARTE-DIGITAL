@@ -1,17 +1,10 @@
 import styles from "../styles/ArtPostCard.module.css";
-
-export interface ArtPost {
-  id?: string;
-  titulo: string;
-  subtitulo: string;
-  cuerpo: string;
-  imagen?: string;
-}
+import type { Post } from "../data/posts";
 
 interface ArtPostProps {
-  post: ArtPost;
-  onBack?: () => void; // <-- Agregamos esta prop opcional para navegar hacia atrás
-  onSave?: (post: ArtPost) => void;
+  post: Post;
+  onBack?: () => void;
+  onSave?: (post: Post) => void;
 }
 
 const ArtPostCard: React.FC<ArtPostProps> = ({ post, onBack, onSave }) => {
@@ -29,18 +22,19 @@ const ArtPostCard: React.FC<ArtPostProps> = ({ post, onBack, onSave }) => {
       )}
 
       <header className="mb-8">
-        <h2 className={styles.title}>{post.titulo}</h2>
-        <p className={styles.subtitle}>{post.subtitulo}</p>
+        <span className="text-xs text-gray-400 block mb-2">{post.date}</span>
+        <h2 className={styles.title}>{post.title}</h2>
+        <p className={styles.subtitle}>{post.excerpt}</p>
       </header>
 
-      {post.imagen && (
+      {post.image && (
         <div className="mb-8">
-          <img src={post.imagen} alt={post.titulo} className="w-full h-auto object-cover" />
+          <img src={post.image} alt={post.title} className="w-full h-auto object-cover" />
         </div>
       )}
 
-      <div className={styles.body}>
-        {post.cuerpo}
+      <div className={`${styles.body} whitespace-pre-line`}>
+        {post.content}
       </div>
 
       {onSave && (

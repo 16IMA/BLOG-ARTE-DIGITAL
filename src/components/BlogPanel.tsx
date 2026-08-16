@@ -17,9 +17,9 @@ function BlogPanel() {
 
 // Estado para el post generado, con un tipo definido para asegurar la estructura de los datos
     const [postActual, setPostActual] = useState<ArtPost>({
-    titulo: "",
-    subtitulo: "",
-    cuerpo: "",
+    title: "",
+    subtitle: "",
+    body: "",
   });
 
 // Recuperar el borrador del localStorage al cargar el componente
@@ -34,7 +34,7 @@ function BlogPanel() {
 // Guardar el borrador en el localStorage cada vez que postActual cambie
 
     useEffect(() => {
-        if (postActual.titulo || postActual.cuerpo) {
+        if (postActual.title || postActual.body) {
         localStorage.setItem('draft_post', JSON.stringify(postActual));
         }
     }, [postActual]);
@@ -90,9 +90,9 @@ function BlogPanel() {
         
 
         setPostActual({
-            titulo: `Crítica "${ideaSemilla}"`,
-            subtitulo: "Análisis generado por la IA",
-            cuerpo: textoIA
+            title: `Crítica "${ideaSemilla}"`,
+            subtitle: "Análisis generado por la IA",
+            body: textoIA
 
             });
 

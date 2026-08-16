@@ -4,10 +4,13 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HomePage from '../components/HomePage';
 import ArtPostCard from '../components/ArtPostCard';
-import { POSTS } from '../data/posts'; // Asegúrate de importar tus datos
+import { POSTS } from '../data/posts';
 
 function App() {
   const [currentPostId, setCurrentPostId] = useState<string | null>(null);
+
+  // Mapeamos los posts al formato ArtPost si es necesario o buscamos el id
+  const selectedPost = POSTS.find((p) => p.id === currentPostId);
 
   return (
     <div className="min-h-screen flex flex-col justify-between bg-surface-container-lowest text-on-surface">
@@ -16,9 +19,9 @@ function App() {
 
       {/* Contenido dinámico */}
       <main className="flex-grow">
-        {currentPostId ? (
+        {selectedPost ? (
           <ArtPostCard 
-            postId={currentPostId} 
+            post={selectedPost} 
             onBack={() => setCurrentPostId(null)} 
           />
         ) : (
