@@ -11,10 +11,10 @@ const HomePage = ({ onSelectPost }: HomePageProps) => {
         {/* Hero Section */}
         <section className="py-20 px-8 md:px-24 bg-slate-50 border-b border-slate-200">
           <div className="max-w-5xl mx-auto">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] font-medium text-slate-500 uppercase">
+            <span className="mt-10 inline-block mb-4 text-xs tracking-[0.3em] font-medium text-slate-500 uppercase">
               Art &amp; Technology
             </span>
-            <h1 className="text-4xl md:text-7xl font-serif leading-tight text-slate-900 mb-8 font-bold">
+            <h1 className=" text-4xl md:text-7xl font-serif leading-tight text-slate-900 mb-8 font-bold">
               Explorando la intersección entre la creatividad y el algoritmo
             </h1>
             <div className="flex items-center gap-2 text-xs tracking-widest text-slate-400 uppercase">
@@ -60,8 +60,11 @@ const HomePage = ({ onSelectPost }: HomePageProps) => {
               <img 
                 alt="Editorial workspace" 
                 className="w-full h-[400px] object-cover rounded grayscale" 
-                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&q=80" 
+                src="../public/IMA-FOTO-EDITORA.jpg" 
               />
+              <p className="text-slate-600 leading-relaxed mb-8">
+                Izaskun Monfort Aurteneche. Editora.
+              </p>
             </div>
             <div>
               <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">Nuestra Filosofía</h2>
