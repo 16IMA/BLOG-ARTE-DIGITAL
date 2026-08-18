@@ -60,7 +60,7 @@ const HomePage = ({ onSelectPost }: HomePageProps) => {
               <img 
                 alt="Editorial workspace" 
                 className="w-52 md:w-72 h-auto object-cover rounded grayscale" 
-                src="../IMA-FOTO-EDITORA.jpg" 
+                src="./IMA-FOTO-EDITORA.JPG" 
               />
               <p className="text-slate-600 leading-relaxed">
                 Izaskun Monfort Aurteneche
