@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/innovation-media-art/',
+  base: '/innovation_media_art/',
   plugins: [
     react(),
     tailwindcss()
