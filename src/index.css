@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colores */
+  --color-primary: #000000;
+  --color-secondary: #5d5f5f;
+  --color-tertiary: #004520;
+  --color-tertiary-container: #008644;
+  --color-tertiary-fixed: #006d36;
+  --color-tertiary-fixed-dim: #005227;
+  --color-on-tertiary: #83fba5;
+  --color-on-tertiary-container: #ffffff;
+  --color-on-tertiary-fixed: #ffffff;
+  --color-on-tertiary-fixed-variant: #83fba5;
+
+  --color-background: #f9f9f9;
+  --color-on-background: #1a1c1c;
+
+  --color-surface: #f9f9f9;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #474747;
+  --color-surface-dim: #dadada;
+  --color-surface-bright: #f9f9f9;
+  --color-surface-variant: #e2e2e2;
+  --color-surface-tint: #5f5e5e;
+
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+
+  --color-outline: #777777;
+  --color-outline-variant: #c6c6c6;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #410002;
+
+  --color-primary-container: #3c3b3b;
+  --color-on-primary: #e5e2e1;
+  --color-on-primary-container: #ffffff;
+  --color-primary-fixed: #5f5e5e;
+  --color-primary-fixed-dim: #474746;
+  --color-on-primary-fixed: #ffffff;
+  --color-on-primary-fixed-variant: #e5e2e1;
+
+  --color-secondary-container: #d4d4d4;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #1a1c1c;
+  --color-secondary-fixed: #c6c6c7;
+  --color-secondary-fixed-dim: #aaabab;
+  --color-on-secondary-fixed: #1a1c1c;
+  --color-on-secondary-fixed-variant: #3a3c3c;
+
+  --color-inverse-surface: #2f3131;
+  --color-inverse-on-surface: #f1f1f1;
+  --color-inverse-primary: #c8c6c5;
+
+  /* Tipografías */
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  /* Bordes */
+  --radius-xs: 0.125rem;
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+/* Ajustes globales */
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}

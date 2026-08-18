@@ -38,5 +38,28 @@ Volar, ha sido el sueño que ha mantenido en vela al ser humano a lo largo de su
 Viajes de ensueño, paisajes oníricos y guiños a escenarios recorridos por el artista integran el imaginario de esta serie. En su concepción y elaboración, Rodrigo Nevsky utiliza la Inteligencia Artificial como herramienta, algoritmos avanzados permiten al artista generar combinaciones de imágenes inéditas y explorar las nuevas dimensiones creativas del arte digital. De esta manera, sobre fondos líricos con delicadas capas de acrílico, se insertan diferentes escenarios y objetos mediante la impresión digital. El color se convierte en elemento con personalidad propia, utilizado con gran acierto en los fondos y la integración de las imágenes. Un delicioso capricho que evidencia el saber hacer del artista, audaz en ejercicios monocromáticos, en fuertes contrastes o al utilizar todo el registro tonal en una obra, y sin embargo, perfectamente equilibrado en cada pieza, dejando sentir el anhelo por la belleza.
 
 El resultado final nos transporta a otra realidad y nos permite prever las posibilidades creativas que ya vienen a nuestro encuentro. Su obra invita a reflexionar sobre el papel de la tecnología en la creación artística y sus implicaciones en este momento, en el que las líneas que limitan los conceptos de lo humano y lo artificial se difuminan para entrelazarse cada vez más. Es posible que como al volar, lanzarnos a una nueva etapa de desarrollo tecnológico confirme de nuevo la dualidad que convive en el interior del ser humano, capaz de inspirar todo lo bueno y generar a su vez lo terrible, pero es esa dicotomía la que permite que lo imposible se convierta en una realidad. Remember everything will be alright, we can meet again somewhere, somewhere far away from here.`
+  },
+  {
+    id: "post-2",
+    title: "'Counter' Eugenio Merino",
+    excerpt: "Eugenio Merino’s Counter converts live net-worth data into a Wall Street-style visual metaphor. But does the piece offer a sustained critique of modern capitalism, or merely a surface-level observation bound to break with the next website update?",
+    date: "2026-08-18",
+    image:"/1-counter-Galerie-Frey-2o26.jpg",
+    content: `
+      Overview
+
+Digital art encompasses contemporary practices that leverage emerging technological tools to investigate, generate, and convey aesthetic inquiry. Eugenio Merino’s Counter features an LED financial ticker that streams the identity and real-time net worth of the world’s wealthiest individual. Recalculated every five minutes following market opening, the piece continuously converts live financial data from Forbes into US dollar values.
+
+Technical Architecture & Media Fragility
+
+The underlying mechanism is more complex than it appears on the surface. A microprocessor connected to the display via Wi-Fi executes a script to scrape the HTML structure of the source website—though integrating a direct API would offer a cleaner technical solution.
+
+However, relying on external live data introduces severe vulnerabilities. Should Forbes alter its URL structures, modify its DOM elements, or go offline entirely, the artwork breaks and loses its functional meaning. This structural dependence raises a poignant question within media art: does the conceptual framework account for its own inevitable technical obsolescence?
+
+Critical Assessment
+
+Aesthetically, the work successfully mimics the high-frequency trading displays of the New York or Madrid stock exchanges, drawing an instant parallel between individual human identity and stock volatility.
+
+Yet, as a conceptual critique, the metaphor remains on the surface. Equating a billionaire’s wealth to stock fluctuations offers a predictable observation; exploring the real-time market turbulence triggered by a single tweet from figures like Elon Musk would yield a far more potent commentary. Ultimately, Counter reflects a recurring challenge in Merino’s oeuvre: prioritizing immediate visual punch over deeper systemic critique.`
   }
 ];

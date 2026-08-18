@@ -59,11 +59,14 @@ const HomePage = ({ onSelectPost }: HomePageProps) => {
             <div>
               <img 
                 alt="Editorial workspace" 
-                className="w-full h-[400px] object-cover rounded grayscale" 
-                src="../public/IMA-FOTO-EDITORA.jpg" 
+                className="w-52 md:w-72 h-auto object-cover rounded grayscale" 
+                src="../IMA-FOTO-EDITORA.jpg" 
               />
-              <p className="text-slate-600 leading-relaxed mb-8">
-                Izaskun Monfort Aurteneche. Editora.
+              <p className="text-slate-600 leading-relaxed">
+                Izaskun Monfort Aurteneche
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-8 italic">
+                Editora
               </p>
             </div>
             <div>
