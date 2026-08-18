@@ -1,33 +1,47 @@
-# 🎨 BLOG-ARTE-DIGITAL
+# 🎨 Innovation, Media & Art (IMA)
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Gemini AI](https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=google-gemini&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Gemini AI](https://img.shields.io/badge/Gemini_AI_(Planned)-8E75B2?style=for-the-badge&logo=google-gemini&logoColor=white)
 
-Un espacio digital inteligente dedicado a la exploración, difusión y análisis del **Arte Digital en España y Europa**. Esta plataforma combina la potencia de la Inteligencia Artificial con la precisión de la curación humana para ofrecer contenido de alta calidad de forma eficiente.
+> 🚧 **Estado del Proyecto:** Producto Mínimo Viable (MVP) en desarrollo activo.
 
-## 🧠 Filosofía del Proyecto
-Creemos en un modelo híbrido. Utilizamos **Gemini LLM** para automatizar la generación de artículos y análisis de tendencias, pero cada pieza pasa por un **Panel de Control** donde editores humanos corrigen, mejoran y validan el contenido antes de su publicación. El sistema también permite la publicación de artículos escritos 100% por humanos.
+Espacio digital y portafolio personal dedicado a la exploración, difusión y análisis del **Arte Digital en España y Europa**. Esta plataforma busca conectar la tecnología y la creación artística mediante una arquitectura moderna e intuitiva.
 
-## ✨ Características Principales
+---
 
-- 🤖 **Automatización Inteligente:** Generación de borradores mediante Gemini para cubrir las noticias más relevantes de arte digital en Europa.
-- ✍️ **Edición Híbrida:** Panel de administración diseñado para que el editor humano ajuste, corrija y personalice cualquier contenido generado por la IA.
-- 🌐 **Enfoque Regional:** Contenido curado y adaptado para las comunidades de España y el resto de Europa.
-- 🔒 **Panel de Administración:** Espacio seguro y exclusivo para gestionar el flujo de trabajo editorial.
-- 🖼️ **Diseño Responsive:** Experiencia optimizada para usuarios que consumen arte y cultura desde cualquier dispositivo.
+## 📌 Visión y Hoja de Ruta
 
-## 🛠️ Tecnologías Utilizadas
+El proyecto se concibe como un espacio híbrido y en evolución constante:
 
-* **Frontend:** React.js + TypeScript (Tipado seguro y componentes modulares).
-* **IA/LLM:** Google Gemini API (Para la generación y síntesis de contenido).
-* **Gestión:** React Router v6 para la navegación del blog y del panel administrativo.
-* **Estilos:** CSS Modules para una arquitectura de estilos limpia y escalable.
+* 👤 **Portafolio Personal:** Exhibición de proyectos, artículos y análisis sobre cultura e innovación digital.
+* 🤖 **Automatización con IA (En ruta):** Integración futura de **Gemini LLM** para asistir y automatizar la redacción de borradores y noticias del sector, manteniendo siempre la curación y edición humana antes de la publicación final.
 
-## 🚀 Instalación y Uso
+---
 
-1. **Clona el repositorio:**
+## ✨ Características (MVP)
+
+* 🎨 **Catálogo de Publicaciones:** Visualización interactiva de artículos y obras de arte digital.
+* 📱 **Diseño Adaptativo:** Interfaz moderna y *responsive* desarrollada con Tailwind CSS v4.
+* ⚡ **Carga Ultra Rápida:** Arquitectura construida sobre Vite para optimizar tiempos de respuesta y rendimiento.
+* 🌐 **Despliegue Continuo:** Publicado mediante GitHub Pages.
+
+---
+
+## 🛠️ Tecnologías
+
+* **Frontend:** React 19 + TypeScript
+* **Empaquetador & Build Tool:** Vite
+* **Estilos:** Tailwind CSS v4 (`@tailwindcss/vite`)
+* **Despliegue:** GitHub Pages (`gh-pages`)
+
+---
+
+## 🚀 Desarrollo Local
+
+1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/16IMA/BLOG-ARTE-DIGITAL.git](https://github.com/16IMA/BLOG-ARTE-DIGITAL.git)
-
+   git clone [https://github.com/16IMA/innovation_media_art.git](https://github.com/16IMA/innovation_media_art.git)
+   cd innovation_media_art
