@@ -14,7 +14,7 @@ export const POSTS: Post[] = [
     title: "Rodrigo Nevsky 'Viajes de ensueño'",
     excerpt: "Reseña de la exposición 'Viajes de ensueño' del artista visual Rodrigo Nevsky, explorando la fusión de arte y tecnología.",
     date: "2026-08-01",
-    image: "/RN51.jpg",
+    image: "./RN51.jpg",
     content: `
       Just stop your crying
 Have the time of your life
@@ -44,7 +44,7 @@ El resultado final nos transporta a otra realidad y nos permite prever las posib
     title: "'Counter' Eugenio Merino",
     excerpt: "Eugenio Merino’s Counter converts live net-worth data into a Wall Street-style visual metaphor. But does the piece offer a sustained critique of modern capitalism, or merely a surface-level observation bound to break with the next website update?",
     date: "2026-08-18",
-    image:"/1-counter-Galerie-Frey-2o26.jpg",
+    image:"./1-counter-Galerie-Frey-2o26.jpg",
     content: `
       Overview
 
