@@ -1,9 +1,10 @@
 interface FooterProps {
   onOpenTerms?: () => void;
+  onOpenPrivacy?: () => void;
   onGoHome?: () => void;
 }
 
-const Footer = ({ onOpenTerms, onGoHome }: FooterProps) => {
+const Footer = ({ onOpenTerms, onOpenPrivacy, onGoHome }: FooterProps) => {
   return (
     <footer className="w-full py-20 px-8 bg-[#F3F3F3] dark:bg-[#0A0A0A] flex flex-col md:flex-row justify-between items-start gap-12">
       <div className="flex flex-col gap-6">
@@ -44,12 +45,13 @@ const Footer = ({ onOpenTerms, onGoHome }: FooterProps) => {
           >
             Archive
           </button>
-          <a 
-            className="text-gray-500 text-sm tracking-widest hover:text-black dark:hover:text-white transition-colors" 
-            href="#"
+          <button 
+            type="button"
+            onClick={onOpenPrivacy}
+            className="text-gray-500 text-sm tracking-widest hover:text-black dark:hover:text-white transition-colors text-left cursor-pointer"
           >
             Privacy
-          </a>
+          </button>
           <button 
             type="button"
             onClick={onOpenTerms}
