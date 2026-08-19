@@ -6,6 +6,8 @@ export interface Post {
   content: string;
   date: string;
   image: string;
+  insight: string;
+  watermark: string;
 }
 
 export const POSTS: Post[] = [
@@ -15,6 +17,8 @@ export const POSTS: Post[] = [
     excerpt: "Reseña de la exposición 'Viajes de ensueño' del artista visual Rodrigo Nevsky, explorando la fusión de arte y tecnología.",
     date: "2026-08-01",
     image: "./RN51.jpg",
+    watermark: "Sobre nubes devanecidas, Rodigo Nevsky",
+    insight: "Es posible que como al volar, lanzarnos a una nueva etapa de desarrollo tecnológico confirme de nuevo la dualidad que convive en el interior del ser humano, capaz de inspirar todo lo bueno y generar a su vez lo terrible, pero es esa dicotomía la que permite que lo imposible se convierta en una realidad.",
     content: `
       Just stop your crying
 Have the time of your life
@@ -45,6 +49,8 @@ El resultado final nos transporta a otra realidad y nos permite prever las posib
     excerpt: "Eugenio Merino’s Counter converts live net-worth data into a Wall Street-style visual metaphor. But does the piece offer a sustained critique of modern capitalism, or merely a surface-level observation bound to break with the next website update?",
     date: "2026-08-18",
     image:"./1-counter-Galerie-Frey-2o26.jpg",
+    watermark: "Fotografía de Stefan Zenzmaier",
+    insight: "Equating a billionaire’s wealth to stock fluctuations offers a predictable observation; exploring the real-time market turbulence triggered by a single tweet from figures like Elon Musk would yield a far more potent commentary.",
     content: `
       Overview
 

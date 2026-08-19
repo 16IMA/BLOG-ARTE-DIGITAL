@@ -1,10 +1,12 @@
-import {POSTS} from '../data/posts';
+// src/components/HomePage.tsx
+import { POSTS } from '../data/posts';
 
 interface HomePageProps {
   onSelectPost: (postId: string) => void;
+  onOpenAbout: () => void;
 }
 
-const HomePage = ({ onSelectPost }: HomePageProps) => {
+const HomePage = ({ onSelectPost, onOpenAbout }: HomePageProps) => {
   return (
     <div className="bg-white text-slate-900 min-h-screen">
       <main>
@@ -14,7 +16,7 @@ const HomePage = ({ onSelectPost }: HomePageProps) => {
             <span className="mt-10 inline-block mb-4 text-xs tracking-[0.3em] font-medium text-slate-500 uppercase">
               Art &amp; Technology
             </span>
-            <h1 className=" text-4xl md:text-7xl font-serif leading-tight text-slate-900 mb-8 font-bold">
+            <h1 className="text-4xl md:text-7xl font-serif leading-tight text-slate-900 mb-8 font-bold">
               Explorando la intersección entre la creatividad y el algoritmo
             </h1>
             <div className="flex items-center gap-2 text-xs tracking-widest text-slate-400 uppercase">
@@ -62,7 +64,7 @@ const HomePage = ({ onSelectPost }: HomePageProps) => {
                 className="w-52 md:w-72 h-auto object-cover rounded grayscale" 
                 src="./IMA-FOTO-EDITORA.JPG" 
               />
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed mt-4 font-semibold">
                 Izaskun Monfort Aurteneche
               </p>
               <p className="text-slate-600 leading-relaxed mb-8 italic">
@@ -74,7 +76,12 @@ const HomePage = ({ onSelectPost }: HomePageProps) => {
               <p className="text-slate-600 leading-relaxed mb-8">
                 IMA es un espacio de curación digital donde el arte contemporáneo dialoga con la innovación tecnológica. Analizamos cómo las nuevas herramientas expanden los límites de la expresión plástica.
               </p>
-              <button className="px-8 py-3 border border-slate-900 text-slate-900 text-xs tracking-widest uppercase hover:bg-slate-900 hover:text-white transition-colors cursor-pointer">
+              
+              {/* Botón funcional hacia Sobre IMA */}
+              <button 
+                onClick={onOpenAbout}
+                className="px-8 py-3 border border-slate-900 text-slate-900 text-xs tracking-widest uppercase hover:bg-slate-900 hover:text-white transition-colors cursor-pointer"
+              >
                 Nuestra Visión
               </button>
             </div>

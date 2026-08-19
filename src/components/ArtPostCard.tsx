@@ -4,10 +4,10 @@ import type { Post } from '../data/posts';
 interface ArtPostProps {
   post: Post;
   onBack?: () => void;
-  onSave?: (post: Post) => void;
+  
 }
 
-const ArtPostCard: React.FC<ArtPostProps> = ({ post, onBack, onSave }) => {
+const ArtPostCard: React.FC<ArtPostProps> = ({ post, onBack }) => {
   return (
     <div className="font-body selection:bg-tertiary/20 selection:text-tertiary">
       <main className="max-w-5xl mx-auto px-8 pt-12 pb-40">
@@ -60,7 +60,7 @@ const ArtPostCard: React.FC<ArtPostProps> = ({ post, onBack, onSave }) => {
                 </span>
               </div>
               <p className="font-headline italic text-on-surface-variant leading-relaxed">
-                "{post.excerpt}"
+                "{post.insight}"
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ const ArtPostCard: React.FC<ArtPostProps> = ({ post, onBack, onSave }) => {
                   className="w-full h-full object-cover mix-blend-multiply opacity-90"
                 />
                 <figcaption className="absolute bottom-6 left-6 text-[10px] font-label uppercase tracking-widest text-white/80 bg-black/40 px-3 py-1 rounded-xs backdrop-blur-xs">
-                  {post.title}
+                  {post.watermark}
                 </figcaption>
               </figure>
             </div>
@@ -85,19 +85,7 @@ const ArtPostCard: React.FC<ArtPostProps> = ({ post, onBack, onSave }) => {
           <div className="space-y-8 text-lg leading-relaxed font-body font-light text-on-surface whitespace-pre-line">
             {post.content}
           </div>
-
-          {/* Acción Guardar / Publicar (si aplica) */}
-          {onSave && (
-            <div className="pt-8 border-t border-outline-variant/30 flex justify-end">
-              <button 
-                onClick={() => onSave(post)} 
-                className="px-8 py-3 bg-tertiary text-on-tertiary font-label text-xs tracking-widest uppercase hover:bg-tertiary-container transition-colors cursor-pointer rounded-xs"
-              >
-                Publicar
-              </button>
-            </div>
-          )}
-
+         
         </article>
 
         {/* Indicador inferior */}
