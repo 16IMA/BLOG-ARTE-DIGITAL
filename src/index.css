@@ -76,6 +76,12 @@ body {
   background-color: var(--color-background);
   color: var(--color-on-surface);
   font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .material-symbols-outlined {
