@@ -64,7 +64,7 @@ export default function ContactPage({ onBack }: ContactPageProps) {
           {/* Imagen Editorial */}
           <div className="w-full max-w-3xl h-64 md:h-96 overflow-hidden bg-surface-container-low mb-16 relative">
             <img 
-              src="./public/contact_image.jpg" 
+              src="./contact_image.jpg" 
               alt="IMA - Digital Art & Technology" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 opacity-90"
             />
