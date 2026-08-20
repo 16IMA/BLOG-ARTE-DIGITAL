@@ -12,18 +12,25 @@ export default function AboutPage({ onBack }: AboutPageProps) {
         <div className="relative w-full bg-surface-container-lowest">
             <div className="flex flex-col md:flex-row w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-12 pb-40">
 
-                {/* Sidebar de Metadatos y Selector de Idioma */}
-                <aside className="md:w-1/4 pt-8 md:pt-20 pb-12 md:pb-0 md:sticky md:top-24 h-max flex flex-col gap-8">
-                    <button
-                        onClick={onBack}
-                        className="flex items-center gap-2 text-primary font-body text-sm font-bold hover:opacity-70 transition-opacity self-start mb-4 cursor-pointer"
-                    >
-                        <span className="material-symbols-outlined text-sm">arrow_back_ios_new</span>
-                        {lang === 'es' ? 'Volver' : 'Back'}
-                    </button>
+                {/* Sidebar Selector de Idioma */}
+               
+                    
+                
 
+                {/* Contenido Principal */}
+                <article className="md:w-3/4 md:pl-16 pt-8 md:pt-20">
+
+                    {/* Título Principal */}
+                    <div className="mb-16">
+                        <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight text-primary pb-6 border-b-2 border-primary max-w-4xl">
+                            {lang === 'es' ? 'Sobre IMA' : 'About IMA'}
+                        </h1>
+                        <p className="font-body text-xs tracking-widest text-secondary uppercase mt-4 font-bold">
+                            Innovation, Media &amp; Art
+                        </p>
+                    </div>
                     {/* Selector de idioma */}
-                    <div className="flex gap-2 p-1 bg-surface-container-low w-fit border border-outline-variant/40">
+                    <div className="flex gap-2 p-1 bg-surface-container-low w-fit border border-outline-variant/40 mb-4">
                         <button
                             onClick={() => setLang('es')}
                             className={`px-3 py-1 font-body text-xs font-bold transition-colors cursor-pointer ${lang === 'es'
@@ -43,42 +50,6 @@ export default function AboutPage({ onBack }: AboutPageProps) {
                             EN
                         </button>
                     </div>
-
-                    <div>
-                        <p className="font-body text-xs font-bold tracking-widest uppercase text-secondary mb-1">
-                            {lang === 'es' ? 'Proyecto' : 'Project'}
-                        </p>
-                        <p className="font-body text-sm text-on-surface-variant">IMA (Innovation, Media &amp; Art)</p>
-                    </div>
-                    <div>
-                        <p className="font-body text-xs font-bold tracking-widest uppercase text-secondary mb-1">
-                            {lang === 'es' ? 'Dirección' : 'Direction'}
-                        </p>
-                        <p className="font-body text-sm text-on-surface-variant">Izaskun Monfort</p>
-                    </div>
-                    <div>
-                        <p className="font-body text-xs font-bold tracking-widest uppercase text-secondary mb-1">
-                            {lang === 'es' ? 'Enfoque' : 'Focus'}
-                        </p>
-                        <p className="font-body text-sm text-on-surface-variant">
-                            {lang === 'es' ? 'Arte, Cloud & IA' : 'Art, Cloud & AI'}
-                        </p>
-                    </div>
-                </aside>
-
-                {/* Contenido Principal */}
-                <article className="md:w-3/4 md:pl-16 pt-8 md:pt-20">
-
-                    {/* Título Principal */}
-                    <div className="mb-16">
-                        <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight text-primary pb-6 border-b-2 border-primary max-w-4xl">
-                            {lang === 'es' ? 'Sobre IMA' : 'About IMA'}
-                        </h1>
-                        <p className="font-body text-xs tracking-widest text-secondary uppercase mt-4 font-bold">
-                            Innovation, Media &amp; Art
-                        </p>
-                    </div>
-
                     {/* Banner Editorial Minimalista */}
                     <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-surface-container-highest relative overflow-hidden mb-16">
                         <img

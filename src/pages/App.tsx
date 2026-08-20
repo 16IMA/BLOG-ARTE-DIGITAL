@@ -1,5 +1,5 @@
 // src/pages/App.tsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HomePage from '../components/HomePage';
@@ -19,6 +19,26 @@ function App() {
 
   const selectedPost = POSTS.find((p) => p.id === currentPostId);
 
+  // 1. Manejador global del botón "Atrás" del navegador / móvil
+  useEffect(() => {
+    const handlePopState = () => {
+      // Si estamos en cualquier vista secundaria, al pulsar atrás regresamos a Home
+      setCurrentPostId(null);
+      setShowTerms(false);
+      setShowPrivacy(false);
+      setShowContact(false);
+      setShowAbout(false);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Función para registrar la entrada a una vista secundaria en el historial
+  const pushToHistory = () => {
+    window.history.pushState({ view: 'subpage' }, '');
+  };
+
   // Función global para volver al inicio
   const handleGoHome = () => {
     setCurrentPostId(null);
@@ -31,6 +51,7 @@ function App() {
 
   // Función para abrir Contacto
   const handleOpenContact = () => {
+    pushToHistory();
     setShowContact(true);
     setShowAbout(false);
     setShowTerms(false);
@@ -41,11 +62,23 @@ function App() {
 
   // Función para abrir About Us / Nuestra Visión
   const handleOpenAbout = () => {
+    pushToHistory();
     setShowAbout(true);
     setShowContact(false);
     setShowTerms(false);
     setShowPrivacy(false);
     setCurrentPostId(null);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Función para seleccionar un artículo
+  const handleSelectPost = (id: string) => {
+    pushToHistory();
+    setCurrentPostId(id);
+    setShowTerms(false);
+    setShowContact(false);
+    setShowPrivacy(false);
+    setShowAbout(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -71,18 +104,12 @@ function App() {
         ) : selectedPost ? (
           <ArtPostCard 
             post={selectedPost} 
-            onBack={() => setCurrentPostId(null)} 
+            onBack={handleGoHome} 
           />
         ) : (
           <HomePage 
             onOpenAbout={handleOpenAbout}
-            onSelectPost={(id) => {
-              setCurrentPostId(id);
-              setShowTerms(false);
-              setShowContact(false);
-              setShowPrivacy(false);
-              setShowAbout(false);
-            }} 
+            onSelectPost={handleSelectPost} 
           />
         )}
       </main>
@@ -91,6 +118,7 @@ function App() {
       <Footer 
         onGoHome={handleGoHome}
         onOpenTerms={() => {
+          pushToHistory();
           setShowTerms(true);
           setShowPrivacy(false);
           setShowContact(false);
@@ -99,6 +127,7 @@ function App() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }} 
         onOpenPrivacy={() => {
+          pushToHistory();
           setShowPrivacy(true);
           setShowTerms(false);
           setShowContact(false);

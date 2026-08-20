@@ -27,30 +27,7 @@ export default function ContactPage({ onBack }: ContactPageProps) {
   return (
     <div className="relative w-full bg-surface-container-lowest">
       <div className="flex flex-col md:flex-row w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-12 pb-40">
-        
-        {/* Sidebar con Metadatos */}
-        <aside className="md:w-1/4 pt-8 md:pt-20 pb-12 md:pb-0 md:sticky md:top-24 h-max flex flex-col gap-8">
-          <button 
-            onClick={onBack}
-            className="flex items-center gap-2 text-primary font-body text-sm font-bold hover:opacity-70 transition-opacity self-start mb-4 cursor-pointer"
-          >
-            <span className="material-symbols-outlined text-sm">arrow_back_ios_new</span>
-            Volver
-          </button>
-          <div>
-            <p className="font-body text-xs font-bold tracking-widest uppercase text-secondary mb-1">Proyecto</p>
-            <p className="font-body text-sm text-on-surface-variant">IMA - Contacto</p>
-          </div>
-          <div>
-            <p className="font-body text-xs font-bold tracking-widest uppercase text-secondary mb-1">Editora</p>
-            <p className="font-body text-sm text-on-surface-variant">Izaskun Monfort</p>
-          </div>
-          <div>
-            <p className="font-body text-xs font-bold tracking-widest uppercase text-secondary mb-1">Ubicación</p>
-            <p className="font-body text-sm text-on-surface-variant">España / Europa</p>
-          </div>
-        </aside>
-
+              
         {/* Contenido Principal */}
         <article className="md:w-3/4 md:pl-16 pt-8 md:pt-20">
           <h1 className="font-headline text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-12 text-primary max-w-4xl">
